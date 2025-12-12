@@ -19,5 +19,8 @@
     "morgan": "^1.10.1",
     "nanoid": "^5.1.6",
     "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
   }
 }
