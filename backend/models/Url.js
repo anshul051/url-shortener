@@ -1,25 +1,26 @@
-import mongoose from 'mongoose';
-
+import mongoose from "mongoose";
 
 const urlSchema = new mongoose.Schema(
-    {
-        originalUrl: {
-            type: String,
-            required: true,
-        },
-        shortUrl: {
-            type: String,
-            required: true,
-            unique: true,
-        },
-        clickCount: {
-            type: Number,
-            default: 0,
-        },
+  {
+    originalUrl: {
+      type: String,
+      required: true,
     },
-    { timestamps: true}
+    shortCode: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    clickCount: {
+      type: Number,
+      default: 0,
+    },
+  },
+  {
+    timestamps: true,
+  }
 );
 
-const Url = mongoose.model('Url', urlSchema);
+const Url = mongoose.model("Url", urlSchema);
 
 export default Url;

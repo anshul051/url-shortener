@@ -16,6 +16,9 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan('dev'));
 
+import urlRoutes from './routes/urlRoutes.js';
+app.use("/", urlRoutes);
+
 //test route
 app.get('/test', (req,res) => {
     res.send('API is running...');
